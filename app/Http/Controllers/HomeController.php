@@ -23,6 +23,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.inicio.login');
+        dd('hola');
+        return view('admin.welcome');
+    }
+
+    public function checklogin(){
+        if(Auth::check()){
+            return view('admin.inicio');
+        }else{
+            return view('admin.welcome');
+        }
     }
 }

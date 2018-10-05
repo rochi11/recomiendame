@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use http\Env\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Notify;
 
 class LoginController extends Controller
 {
@@ -35,5 +39,24 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function userlogin(Request $request){
+        $checkuser = User::where('nombreUsuario',$request->nombre)->first();
+        if(!$checkuser){
+            Notify::error('Usuario no existe','Error');
+            return redirect()->back();
+        }
+        if($checkuser){
+            if(Hash::check($request->input("password"), $checkuser->clave)) {
+                Auth::loginUsingId($checkuser->idUser, true);
+                $username = $checkuser->nombre . " " . $checkuser->apellido;
+                Notify::success('Usuario logueado correctamente', 'Exito');
+                return view('admin.dashboard');
+            }else{
+                Notify::error('Clave Incorrecta','Error');
+                return redirect()->back();
+            }
+        }
     }
 }

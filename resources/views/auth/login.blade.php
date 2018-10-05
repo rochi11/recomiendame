@@ -33,13 +33,13 @@
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <label for="inputEmail1" class="control-label">Usuario</label>
-                                        <input type="text" class="form-control" id="inputEmail1" name="username" placeholder="Ejm: 09456855">
+                                        <input type="text" class="form-control" id="inputEmail1" name="nombre" placeholder="Ejm: 09456855">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-12">
                                         <label for="inputEmail2" class="control-label">Contraseña</label>
-                                        <input type="password" name="password" class="form-control" id="inputEmail2" placeholder="********">
+                                        <input type="password" name="clave" class="form-control" id="inputEmail2" placeholder="********">
                                     </div>
                                 </div>
                                 <div class="form-group">
