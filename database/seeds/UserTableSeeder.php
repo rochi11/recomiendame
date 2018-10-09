@@ -13,8 +13,10 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => '42005203',
-            'email' => 'admin@telemovilperu.com',
+            'user' => '42005203',
+            'nombre' => 'Rommel',
+            'apellido' => 'Chipana',
+            'email' => 'admin@recomiendame.com',
             'password' => bcrypt('1234'),
             'created_at' => Carbon::now(),
         ]);

@@ -1,6 +1,7 @@
 <!-- Seccion de html header -->
 @include('admin.layouts.partials.htmlheader')
 <body>
+
 <!-- Seccion de navbar izquierda -->
 @include('admin.layouts.partials.sidebar')
 <!-- Right Panel -->

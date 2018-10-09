@@ -24,7 +24,7 @@
                     @csrf
 
                     <div class="login-header">
-                        <img src="/img/barcode.jpg">
+                        <img src="/img/barc.png">
                         <br><br>
                     </div>
                     <div class="login-body">
@@ -32,8 +32,8 @@
                             <form class="form-horizontal">
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <label for="inputEmail1" class="control-label">Usuario</label>
-                                        <input type="text" class="form-control" id="inputEmail1" name="nombre" placeholder="Ejm: 09456855">
+                                        <label for="inputEmail1" class="control-label">D.N.I.</label>
+                                        <input type="text" class="form-control" id="inputEmail1" name="user" placeholder="Dni: 42556565">
                                     </div>
                                 </div>
                                 <div class="form-group">
