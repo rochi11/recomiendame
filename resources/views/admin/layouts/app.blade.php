@@ -1,7 +1,7 @@
 <!-- Seccion de html header -->
 @include('admin.layouts.partials.htmlheader')
 <body>
-
+<div id="app">
 <!-- Seccion de navbar izquierda -->
 @include('admin.layouts.partials.sidebar')
 <!-- Right Panel -->
@@ -16,10 +16,9 @@
     <!-- Seccion de footer -->
     @include('admin.layouts.partials.footer')
 </div><!-- /#right-panel -->
+</div>
 <!--Seccion de scripts-->
 @include('admin.layouts.partials.scripts')
-<div id="container">
-</div>
 </body>
 </html>
 

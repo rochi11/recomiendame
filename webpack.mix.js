@@ -12,4 +12,9 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .extract(['jquery','popper.js'])
+    .sass('resources/sass/bootstrap/bootstrap.scss', 'public/css')
+    .sass('resources/sass/style.scss', 'public/css')
+    .sass('resources/sass/socials.scss', 'public/css')
+    .sass('resources/sass/todo-list.scss', 'public/css')
+    .sass('resources/sass/variables.scss', 'public/css');

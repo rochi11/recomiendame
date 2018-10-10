@@ -1,4 +1,10 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/style.css": "/css/style.css",
+    "/css/socials.css": "/css/socials.css",
+    "/css/todo-list.css": "/css/todo-list.css",
+    "/css/variables.css": "/css/variables.css",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/manifest.js": "/js/manifest.js"
 }

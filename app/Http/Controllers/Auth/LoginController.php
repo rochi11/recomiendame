@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\User;
-use Notify;
 
 class LoginController extends Controller
 {
@@ -45,7 +44,7 @@ class LoginController extends Controller
     public function userlogin(Request $request){
         $checkuser = User::where('user',$request->user)->first();
         if(!$checkuser){
-            Notify::error('Usuario no existe','Error');
+
             return redirect()->back();
         }
         if($checkuser){
@@ -53,10 +52,10 @@ class LoginController extends Controller
 
                 Auth::loginUsingId($checkuser->idUser, true);
                 $username = $checkuser->nombre . " " . $checkuser->apellido;
-                Notify::success('Usuario logueado correctamente', 'Exito');
+
                 return view('welcome');
             }else{
-                Notify::error('Clave Incorrecta','Error');
+
                 return redirect()->back();
             }
         }
