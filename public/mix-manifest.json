@@ -8,10 +8,5 @@
     "/css/fontawesome.css": "/css/fontawesome.css",
     "/js/vendor.js": "/js/vendor.js",
     "/js/manifest.js": "/js/manifest.js",
-    "/css/demo.css": "/css/demo.css",
-    "/css/themify-icons.css": "/css/themify-icons.css",
-    "/css/ie7.css": "/css/ie7.css",
-    "/css/normalize.css": "/css/normalize.css",
-    "/css/weather-icons.css": "/css/weather-icons.css",
-    "/css/fullcalendar.css": "/css/fullcalendar.css"
+    "/css/all.css": "/css/all.css"
 }
