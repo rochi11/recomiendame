@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -13,7 +14,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Product::all();
+        if($productos){
+//            dd($productos);
+            return view('admin.productos.index', compact('productos'));
+        }else {
+            return view('admin.productos.index');
+        }
     }
 
     /**
@@ -23,7 +30,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.productos.new');
     }
 
     /**
@@ -34,7 +41,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $producto = new Product();
+        $producto->nombre = $request->nombreProducto;
+        $producto->marca = $request->marcaProducto;
+        $producto->precio = $request->precioProducto;
+        $producto->fechaVencimiento = $request->fechaVencimientoProducto;
+        $producto->lote = $request->loteProducto;
+        $producto->peso = $request->pesoProducto;
+        $producto->cantidad = $request->cantidadProducto;
+        $producto->unidadMedida = $request->unidadMedidaProducto;
+        $producto->descuento = $request->descuentoProducto;
+        $producto->fechaDescuento = $request->fechaDescuentoProducto;
+        $producto->nroGondola = $request->numeroGondolaProducto;
+        $producto->save();
+        return redirect('productos/lista');
     }
 
     /**
@@ -56,7 +76,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $producto = Product::find($id);
+        return view('admin.productos.new', compact('producto'));
     }
 
     /**
@@ -68,7 +89,20 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $producto = Product::find($id);
+        $producto->nombre = $request->nombreProducto;
+        $producto->marca = $request->marcaProducto;
+        $producto->precio = $request->precioProducto;
+        $producto->fechaVencimiento = $request->fechaVencimientoProducto;
+        $producto->lote = $request->loteProducto;
+        $producto->peso = $request->pesoProducto;
+        $producto->cantidad = $request->cantidadProducto;
+        $producto->unidadMedida = $request->unidadMedidaProducto;
+        $producto->descuento = $request->descuentoProducto;
+        $producto->fechaDescuento = $request->fechaDescuentoProducto;
+        $producto->nroGondola = $request->numeroGondolaProducto;
+        $producto->update();
+        return redirect('$productos/lista');
     }
 
     /**
@@ -79,6 +113,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $producto = Product::find($id);
+        $producto->delete();
+        return redirect('productos/lista');
     }
 }

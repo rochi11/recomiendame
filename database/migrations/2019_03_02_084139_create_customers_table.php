@@ -23,7 +23,7 @@ class CreateCustomersTable extends Migration
             $table->string('edad');
             $table->string('sexo');
             $table->string('telefono');
-            $table->string('correo')->unique();
+            $table->string('correo');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

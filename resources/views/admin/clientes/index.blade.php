@@ -12,12 +12,12 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered display" id="myTable">
+                            <table class="table small-device" id="myTable">
                                 <thead>
                                 <tr>
-                                    <th style="width: 10%">Nombres</th>
-                                    <th style="width: 10%">Apellido Paterno</th>
-                                    <th style="width: 10%">Apellido Materno</th>
+                                    <th style="width: 10%">Nombre</th>
+                                    <th style="width: 10%">A. Paterno</th>
+                                    <th style="width: 10%">A. Materno</th>
                                     <th style="width: 10%">Dirección</th>
                                     <th style="width: 10%">Edad</th>
                                     <th style="width: 10%">Sexo</th>
@@ -30,7 +30,7 @@
                                 @if(isset($clientes))
                                     @foreach($clientes as $cliente)
                                         <tr>
-                                            <td>{{$cliente->nombre1 + $cliente->nombre2}}</td>
+                                            <td>{{$cliente->nombre1}}</td>
                                             <td>{{$cliente->apPaterno}}</td>
                                             <td>{{$cliente->apMaterno}}</td>
                                             <td>{{$cliente->direccion}}</td>
@@ -38,7 +38,10 @@
                                             <td>{{$cliente->sexo}}</td>
                                             <td>{{$cliente->telefono}}</td>
                                             <td>{{$cliente->correo}}</td>
-                                            <td style="width: 200px"></td>
+                                            <td style="width: 200px">
+                                                <a href="{{url('cliente/editar/'.$cliente->idCustomer)}}"><span style="margin-left: 10px; color: #0259b0" class="fa fa-edit"></span></a>
+                                                <a href="{{url('cliente/borrar/'.$cliente->idCustomer)}}"><span style="margin-left: 10px; color: #013468" class="fas fa-trash-alt"></span></a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 @endif

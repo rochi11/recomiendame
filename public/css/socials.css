@@ -30,7 +30,7 @@
   background: #344e86;
 }
 
-.social [class*="-facebook"] {
+.social [class*=-facebook] {
   background: #2d4373;
 }
 
@@ -42,7 +42,7 @@
   background: #0099d4;
 }
 
-.social [class*="-twitter"] {
+.social [class*=-twitter] {
   background: #0087ba;
 }
 
@@ -54,7 +54,7 @@
   background: #4169a2;
 }
 
-.social [class*="-linkedin"] {
+.social [class*=-linkedin] {
   background: #395d90;
 }
 
@@ -66,7 +66,7 @@
   background: #e60077;
 }
 
-.social [class*="-flickr"] {
+.social [class*=-flickr] {
   background: #cc006a;
 }
 
@@ -78,7 +78,7 @@
   background: #2a435c;
 }
 
-.social [class*="-tumblr"] {
+.social [class*=-tumblr] {
   background: #22364a;
 }
 
@@ -90,7 +90,7 @@
   background: #024b4d;
 }
 
-.social [class*="-xing"] {
+.social [class*=-xing] {
   background: #013334;
 }
 
@@ -102,7 +102,7 @@
   background: #3876b4;
 }
 
-.social [class*="-github"] {
+.social [class*=-github] {
   background: #3269a0;
 }
 
@@ -114,7 +114,7 @@
   background: #d4431b;
 }
 
-.social [class*="-html5"] {
+.social [class*=-html5] {
   background: #be3c18;
 }
 
@@ -126,7 +126,7 @@
   background: #f67d28;
 }
 
-.social [class*="-openid"] {
+.social [class*=-openid] {
   background: #f56f0f;
 }
 
@@ -138,7 +138,7 @@
   background: #f86c01;
 }
 
-.social [class*="-stack-overflow"] {
+.social [class*=-stack-overflow] {
   background: #df6101;
 }
 
@@ -150,7 +150,7 @@
   background: #0161a1;
 }
 
-.social [class*="-css3"] {
+.social [class*=-css3] {
   background: #015187;
 }
 
@@ -162,7 +162,7 @@
   background: #a20000;
 }
 
-.social [class*="-youtube"] {
+.social [class*=-youtube] {
   background: #880000;
 }
 
@@ -174,7 +174,7 @@
   background: #e7357a;
 }
 
-.social [class*="-dribbble"] {
+.social [class*=-dribbble] {
   background: #e51e6b;
 }
 
@@ -186,7 +186,7 @@
   background: #0070cc;
 }
 
-.social [class*="-dropbox"] {
+.social [class*=-dropbox] {
   background: #0070cc;
 }
 
@@ -198,7 +198,7 @@
   background: #c43d2b;
 }
 
-.social [class*="-google-plus"] {
+.social [class*=-google-plus] {
   background: #b03626;
 }
 
@@ -210,7 +210,7 @@
   background: #497293;
 }
 
-.social [class*="-instagram"] {
+.social [class*=-instagram] {
   background: #406582;
 }
 
@@ -222,7 +222,7 @@
   background: #b51d23;
 }
 
-.social [class*="-pinterest"] {
+.social [class*=-pinterest] {
   background: #9f191f;
 }
 
@@ -234,7 +234,7 @@
   background: #3d5a7d;
 }
 
-.social [class*="-vk"] {
+.social [class*=-vk] {
   background: #344d6c;
 }
 
@@ -246,7 +246,7 @@
   background: #350178;
 }
 
-.social [class*="-yahoo"] {
+.social [class*=-yahoo] {
   background: #2a015e;
 }
 
@@ -258,7 +258,7 @@
   background: #0059fd;
 }
 
-.social [class*="-behance"] {
+.social [class*=-behance] {
   background: #0050e3;
 }
 
@@ -270,7 +270,7 @@
   background: #e63e00;
 }
 
-.social [class*="-reddit"] {
+.social [class*=-reddit] {
   background: #cc3700;
 }
 
@@ -282,7 +282,7 @@
   background: #699f00;
 }
 
-.social [class*="-spotify"] {
+.social [class*=-spotify] {
   background: #588500;
 }
 
@@ -294,7 +294,7 @@
   background: #00a67c;
 }
 
-.social [class*="-vine"] {
+.social [class*=-vine] {
   background: #008c69;
 }
 
@@ -306,7 +306,7 @@
   background: #0e6498;
 }
 
-.social [class*="-foursquare"] {
+.social [class*=-foursquare] {
   background: #0c5480;
 }
 
@@ -318,7 +318,7 @@
   background: #a0cf3c;
 }
 
-.social [class*="-vimeo"] {
+.social [class*=-vimeo] {
   background: #93c130;
 }
 

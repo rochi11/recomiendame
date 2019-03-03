@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);/* 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);@charset "UTF-8";
+
+/* 
 
 
 Googel Fonts  */
@@ -200,7 +202,6 @@ Googel Fonts  */
 .tdl-holder li span {
   margin-left: 30px;
   vertical-align: middle;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -215,7 +216,6 @@ Googel Fonts  */
   background: #fafafa;
   color: #99abb4;
   font-size: 15px;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -233,7 +233,6 @@ Googel Fonts  */
   text-decoration: none;
   height: 16px;
   width: 20px;
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -241,13 +240,13 @@ Googel Fonts  */
   color: rgba(153, 171, 180, 0.8);
 }
 
-.tdl-holder input[type="checkbox"] {
+.tdl-holder input[type=checkbox] {
   cursor: pointer;
   opacity: 0;
   position: absolute;
 }
 
-.tdl-holder input[type="checkbox"] + i {
+.tdl-holder input[type=checkbox] + i {
   border: 1px solid rgba(153, 171, 180, 0.3);
   display: block;
   height: 18px;
@@ -257,9 +256,9 @@ Googel Fonts  */
   z-index: 1;
 }
 
-.tdl-holder input[type="checkbox"]:checked + i::after {
+.tdl-holder input[type=checkbox]:checked + i::after {
   content: "\E64C";
-  font-family: 'themify';
+  font-family: "themify";
   display: block;
   color: rgba(153, 171, 180, 0.5);
   left: 0;
@@ -268,11 +267,11 @@ Googel Fonts  */
   z-index: 2;
 }
 
-.tdl-holder input[type="checkbox"]:checked ~ span {
+.tdl-holder input[type=checkbox]:checked ~ span {
   text-decoration: line-through;
 }
 
-.tdl-holder input[type="text"] {
+.tdl-holder input[type=text] {
   height: 60px;
   margin-top: 20px;
   font-size: 14px;

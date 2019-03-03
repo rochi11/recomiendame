@@ -16,7 +16,8 @@ class CustomerController extends Controller
     {
         $clientes = Customer::all();
         if($clientes){
-            return view('admin.clientes.index', compact($clientes));
+//            dd($clientes);
+            return view('admin.clientes.index', compact('clientes'));
         }else {
             return view('admin.clientes.index');
         }
@@ -62,7 +63,7 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -73,7 +74,8 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $cliente = Customer::find($id);
+        return view('admin.clientes.new', compact('cliente'));
     }
 
     /**
@@ -85,7 +87,18 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cliente = Customer::find($id);
+        $cliente->nombre1 = $request->primerNombreCliente;
+        $cliente->nombre2 = $request->segundoNombreCliente;
+        $cliente->apPaterno = $request->apellidoPaterno;
+        $cliente->apMaterno = $request->apellidoMaterno;
+        $cliente->direccion = $request->direccionCliente;
+        $cliente->edad = $request->edadCliente;
+        $cliente->sexo = $request->sexoCliente;
+        $cliente->telefono = $request->telefonoCliente;
+        $cliente->correo = $request->correoCliente;
+        $cliente->update();
+        return redirect('clientes/lista');
     }
 
     /**
@@ -96,6 +109,8 @@ class CustomerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cliente = Customer::find($id);
+        $cliente->delete();
+        return redirect('clientes/lista');
     }
 }
