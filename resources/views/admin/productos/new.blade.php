@@ -20,7 +20,7 @@
                             </a>
                         </div>
                     </div>
-                    @if(!isset($cliente))
+                    @if(!isset($producto))
                         <form action="{{url('producto/grabar')}}" method="post" id="edit-profile" class="form-horizontal">
                     @else
                         <form action="{{url('producto/actualizar/'.$producto->idProduct)}}" method="post" id="edit-profile" class="form-horizontal">

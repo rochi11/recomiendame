@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Store;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
@@ -13,7 +14,12 @@ class StoreController extends Controller
      */
     public function index()
     {
-        //
+        $tiendas = Store::all();
+        if($tiendas){
+            return view('admin.tiendas.index', compact('tiendas'));
+        }else {
+            return view('admin.tiendas.index');
+        }
     }
 
     /**
@@ -23,7 +29,7 @@ class StoreController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tiendas.new');
     }
 
     /**
@@ -34,7 +40,15 @@ class StoreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tienda = new Store();
+        $tienda->nombre = $request->nombreTienda;
+        $tienda->direccion = $request->direccionTienda;
+        $tienda->telefono = $request->telefonoTienda;
+        $tienda->correoTienda = $request->correoTienda;
+        $tienda->idUser = $request->idUserTienda;
+        $tienda->meta = $request->metaTienda;
+        $tienda->save();
+        return redirect('tiendas/lista');
     }
 
     /**
@@ -56,7 +70,8 @@ class StoreController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tienda = Store::find($id);
+        return view('admin.tiendas.new', compact('tienda'));
     }
 
     /**
@@ -68,7 +83,15 @@ class StoreController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tienda = Store::find($id);
+        $tienda->nombre = $request->nombreTienda;
+        $tienda->direccion = $request->direccionTienda;
+        $tienda->telefono = $request->telefonoTienda;
+        $tienda->correoTienda = $request->correoTienda;
+        $tienda->idUser = $request->idUserTienda;
+        $tienda->meta = $request->metaTienda;
+        $tienda->update();
+        return redirect('tiendas/lista');
     }
 
     /**
@@ -79,6 +102,8 @@ class StoreController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tienda = Store::find($id);
+        $tienda->delete();
+        return redirect('tiendas/lista');
     }
 }

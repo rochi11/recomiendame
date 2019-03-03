@@ -102,7 +102,7 @@ class ProductController extends Controller
         $producto->fechaDescuento = $request->fechaDescuentoProducto;
         $producto->nroGondola = $request->numeroGondolaProducto;
         $producto->update();
-        return redirect('$productos/lista');
+        return redirect('productos/lista');
     }
 
     /**
