@@ -71,7 +71,7 @@ class StoreController extends Controller
     public function edit($id)
     {
         $tienda = Store::find($id);
-        return view('admin.tiendas.new', compact('tienda'));
+        return view('admin.tiendas.show', compact('tienda'));
     }
 
     /**

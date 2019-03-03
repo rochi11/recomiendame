@@ -8,7 +8,7 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-header bg-light">
-                        Datos basicos del contacto
+                        Datos Basicos del Producto
 
                         <div class="card-actions">
                             <a href="#" class="btn">
@@ -20,68 +20,64 @@
                             </a>
                         </div>
                     </div>
-                    @if(!isset($producto))
-                        <form action="{{url('producto/grabar')}}" method="post" id="edit-profile" class="form-horizontal">
-                    @else
-                        <form action="{{url('producto/actualizar/'.$producto->idProduct)}}" method="post" id="edit-profile" class="form-horizontal">
-                    @endif
+                    <form action="{{url('producto/grabar')}}" method="post" id="edit-profile" class="form-horizontal">
                         {{ csrf_field() }}
                         <fieldset>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="nombreProducto" @if(!isset($producto)) @else value="{{ $producto->nombre }}" @endif type="text" placeholder="Nombre Producto">
+                                            <input class="form-control" name="nombreProducto" type="text" placeholder="Nombre Producto">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="marcaProducto" @if(!isset($producto)) @else value="{{ $producto->marca }}" @endif type="text" placeholder="Marca Producto">
+                                            <input class="form-control" name="marcaProducto" type="text" placeholder="Marca Producto">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="precioProducto" @if(!isset($producto)) @else value="{{ $producto->precio }}" @endif type="text" placeholder="Precio Producto">
+                                            <input class="form-control" name="precioProducto" type="text" placeholder="Precio Producto">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="fechaVencimientoProducto" @if(!isset($producto)) @else value="{{ $producto->fechaVencimiento }}" @endif type="text" placeholder="Fecha de Vencimiento">
+                                            <input class="form-control" name="fechaVencimientoProducto" type="text" placeholder="Fecha de Vencimiento">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="loteProducto" @if(!isset($producto)) @else value="{{ $producto->lote }}" @endif type="text" placeholder="Lote">
+                                            <input class="form-control" name="loteProducto" type="text" placeholder="Lote">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="pesoProducto" @if(!isset($producto)) @else value="{{ $producto->peso }}" @endif type="text" placeholder="Peso">
+                                            <input class="form-control" name="pesoProducto" type="text" placeholder="Peso">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="cantidadProducto" @if(!isset($producto)) @else value="{{ $producto->cantidad }}" @endif type="text" placeholder="Cantidad">
+                                            <input class="form-control" name="cantidadProducto" type="text" placeholder="Cantidad">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="unidadMedidaProducto" @if(!isset($producto)) @else value="{{ $producto->unidadMedida }}" @endif type="text" placeholder="Unidad de Medida">
+                                            <input class="form-control" name="unidadMedidaProducto" type="text" placeholder="Unidad de Medida">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="descuentoProducto" @if(!isset($producto)) @else value="{{ $producto->descuento }}" @endif type="text" placeholder="Descuento">
+                                            <input class="form-control" name="descuentoProducto" type="text" placeholder="Descuento">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="fechaDescuentoProducto" @if(!isset($producto)) @else value="{{ $producto->fechaDescuento }}" @endif type="text" placeholder="Fecha de Descuento">
+                                            <input class="form-control" name="fechaDescuentoProducto" type="text" placeholder="Fecha de Descuento">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="numeroGondolaProducto" @if(!isset($producto)) @else value="{{ $producto->nroGondola }}" @endif type="text" placeholder="Numero de Gondola">
+                                            <input class="form-control" name="numeroGondolaProducto" type="text" placeholder="Numero de Gondola">
                                         </div>
                                     </div>
                                 </div>
