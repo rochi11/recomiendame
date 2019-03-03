@@ -31,7 +31,7 @@ class HomeController extends Controller
         if(Auth::check()){
             return view('admin.inicio');
         }else{
-            return view('admin.welcome');
+            return view('welcome');
         }
     }
 }

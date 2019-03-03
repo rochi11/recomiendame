@@ -18,6 +18,9 @@ Route::get('/login', 'Auth\LoginController@showloginform')->name('login');
 
 Route::post('/userlogin', 'Auth\LoginController@userlogin');
 
+Route::get('clientes/lista','CustomerController@index');
+Route::get('cliente/nuevo','CustomerController@create');
+Route::post('cliente/grabar','CustomerController@store');
 //Auth::routes();
 
 

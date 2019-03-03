@@ -44,8 +44,8 @@ class LoginController extends Controller
     public function userlogin(Request $request){
         $checkuser = User::where('user',$request->user)->first();
         if(!$checkuser){
-
-            return redirect()->back();
+            return view('welcome');
+//            return redirect()->back();
         }
         if($checkuser){
             if(Hash::check($request->clave, $checkuser->password)) {
