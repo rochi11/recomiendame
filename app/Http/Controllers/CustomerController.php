@@ -49,7 +49,9 @@ class CustomerController extends Controller
         $cliente->direccion = $request->direccionCliente;
         $cliente->edad = $request->edadCliente;
         $cliente->sexo = $request->sexoCliente;
-        $cliente->telefono = $request->telefonoCliente;
+        $cliente->telefonoFijo = $request->telefonoFijoCliente;
+        $cliente->telefonoMovil = $request->telefonoMovilCliente;
+        $cliente->ruc = $request->rucCliente;
         $cliente->correo = $request->correoCliente;
         $cliente->save();
         return redirect('clientes/lista');
@@ -95,7 +97,9 @@ class CustomerController extends Controller
         $cliente->direccion = $request->direccionCliente;
         $cliente->edad = $request->edadCliente;
         $cliente->sexo = $request->sexoCliente;
-        $cliente->telefono = $request->telefonoCliente;
+        $cliente->telefonoFijo = $request->telefonoFijoCliente;
+        $cliente->telefonoMovil = $request->telefonoMovilCliente;
+        $cliente->ruc = $request->rucCliente;
         $cliente->correo = $request->correoCliente;
         $cliente->update();
         return redirect('clientes/lista');

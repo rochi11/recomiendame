@@ -21,8 +21,6 @@ class CreateStoresTable extends Migration
             $table->string('correoTienda');
             $table->string('idUser');
             $table->string('meta');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });

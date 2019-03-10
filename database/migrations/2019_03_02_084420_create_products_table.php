@@ -26,8 +26,6 @@ class CreateProductsTable extends Migration
             $table->string('descuento');
             $table->string('fechaDescuento');
             $table->string('nroGondola');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -31,6 +31,8 @@ Route::post('producto/grabar','ProductController@store');
 Route::get('producto/editar/{id}','ProductController@edit');
 Route::post('producto/actualizar/{id}','ProductController@update');
 Route::get('producto/borrar/{id}','ProductController@destroy');
+Route::get('/producto/importar','ProductController@import');
+Route::post('/producto/importarProducto','ProductController@importProducts');
 // Tiendas
 Route::get('tiendas/lista','StoreController@index');
 Route::get('tienda/nuevo','StoreController@create');
@@ -38,6 +40,13 @@ Route::post('tienda/grabar','StoreController@store');
 Route::get('tienda/editar/{id}','StoreController@edit');
 Route::post('tienda/actualizar/{id}','StoreController@update');
 Route::get('tienda/borrar/{id}','StoreController@destroy');
+// Transacciones
+Route::get('transaccion/lista','TransactionController@index');
+Route::get('transaccion/nueva','TransactionController@create');
+Route::post('transaccion/grabar','TransactionController@store');
+Route::get('transaccion/editar/{id}','TransactionController@edit');
+Route::post('transaccion/actualizar/{id}','TransactionController@update');
+Route::get('transaccion/borrar/{id}','TransactionController@destroy');
 //Auth::routes();
 
 

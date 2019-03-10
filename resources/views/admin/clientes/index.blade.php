@@ -36,7 +36,9 @@
                                             <td>{{$cliente->direccion}}</td>
                                             <td>{{$cliente->edad}}</td>
                                             <td>{{$cliente->sexo}}</td>
-                                            <td>{{$cliente->telefono}}</td>
+                                            <td>{{$cliente->telefonoFijo}}</td>
+                                            <td>{{$cliente->telefonoMovil}}</td>
+                                            <td>{{$cliente->ruc}}</td>
                                             <td>{{$cliente->correo}}</td>
                                             <td style="width: 200px">
                                                 <a href="{{url('cliente/editar/'.$cliente->idCustomer)}}"><span style="margin-left: 10px; color: #0259b0" class="fa fa-edit"></span></a>

@@ -4,7 +4,7 @@
 @section('content')
 
     <div class="content">
-        hollaaaaaaaaaaa
+
     </div>
 
 @endsection

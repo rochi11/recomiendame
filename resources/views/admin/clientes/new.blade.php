@@ -62,7 +62,17 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group has-feedback">
-                                            <input class="form-control" name="telefonoCliente" type="text" placeholder="Teléfono">
+                                            <input class="form-control" name="telefonoFijoCliente" type="text" placeholder="Teléfono Fijo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group has-feedback">
+                                            <input class="form-control" name="telefonoMovilCliente" type="text" placeholder="Teléfono Movil">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group has-feedback">
+                                            <input class="form-control" name="rucCliente" type="text" placeholder="RUC">
                                         </div>
                                     </div>
                                     <div class="col-md-12">

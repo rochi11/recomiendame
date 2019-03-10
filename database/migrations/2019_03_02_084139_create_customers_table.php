@@ -22,10 +22,10 @@ class CreateCustomersTable extends Migration
             $table->string('direccion');
             $table->string('edad');
             $table->string('sexo');
-            $table->string('telefono');
+            $table->string('telefonoFijo');
+            $table->string('telefonoMovil');
+            $table->string('ruc');
             $table->string('correo');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
         });

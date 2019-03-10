@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use Excel;
 
 class ProductController extends Controller
 {
@@ -116,5 +117,38 @@ class ProductController extends Controller
         $producto = Product::find($id);
         $producto->delete();
         return redirect('productos/lista');
+    }
+
+    public function import(Request $request)
+    {
+        return view('admin.productos.import');
+    }
+
+    public function importProducts(Request $request)
+    {
+        dd($request);
+        $category = Category::where('idAccount',Auth::user()->idAccount)->first();
+
+        Excel::load($request->excel, function($reader) use ($category) {
+            $excel = $reader->get();
+            // iteracción
+            // dd($category);
+            $reader->each(function($row) use ($category) {
+                if(!is_null($row->nombre)){
+                    $product = new Product;
+                    $product->nombreProducto = $row->nombre;
+                    $product->categoriaProducto = $category->idCategoria;
+                    $product->referenciaProducto = $row->referencia;
+                    $product->codigoProducto = $row->codigo;
+                    $product->precioProducto = $row->precio;
+                    $product->medidaProducto = $row->medida;
+                    $product->favoritoProducto = 0;
+                    $product->idAccount = Auth::user()->idAccount;
+                    $product->save();
+                }
+            });
+        });
+        Notify::success('Productos importados exitosamente','Èxito');
+        return redirect('/producto');
     }
 }
