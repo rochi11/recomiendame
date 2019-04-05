@@ -34,4 +34,11 @@ class HomeController extends Controller
             return view('welcome');
         }
     }
+
+    public function saludo()
+    {
+        $saludo = "hola desde recomiendame";
+        dd($saludo);
+        return "Holaaaa";
+    }
 }
