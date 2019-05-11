@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,22 +24,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        dd('hola');
-        return view('admin.welcome');
+        return view('welcome');
     }
 
     public function checklogin(){
+
         if(Auth::check()){
-            return view('admin.inicio');
+            return view('auth.login');
         }else{
-            return view('welcome');
+            return redirect('admin.pages');
         }
     }
 
     public function saludo()
     {
         $saludo = "hola desde recomiendame";
-        dd($saludo);
         return "Holaaaa";
     }
 }

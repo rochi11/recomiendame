@@ -8,19 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\User;
+use Notify;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
 
     use AuthenticatesUsers;
 
@@ -29,7 +20,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+//    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -38,26 +29,40 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest')->except('logout');
+//        $this->middleware('guest')->except('logout');
+    }
+
+    public function showloginform(){
+        return view('admin.pages.login');
     }
 
     public function userlogin(Request $request){
+
         $checkuser = User::where('user',$request->user)->first();
+//        dd($checkuser);
         if(!$checkuser){
-            return view('welcome');
-//            return redirect()->back();
+            Notify::error('Usuario no existe','Error');
+            return redirect()->back();
         }
         if($checkuser){
-            if(Hash::check($request->clave, $checkuser->password)) {
-
-                Auth::loginUsingId($checkuser->idUser, true);
+            if(Hash::check($request->input("clave"), $checkuser->password)){
+                Auth::loginUsingId($checkuser->id,true);
                 $username = $checkuser->nombre . " " . $checkuser->apellido;
-
-                return view('welcome');
-            }else{
-
+                Notify::success('Bienvenido '.$username,'Éxito');
+                return view('admin.welcome');
+            }
+            else{
+                Notify::error('Clave Incorrecta','Error');
                 return redirect()->back();
             }
+
         }
+    }
+
+    public function userlogout()
+    {
+        Auth::logout();
+        Notify::success('Hasta pronto ','Éxito');
+        return redirect('/');
     }
 }

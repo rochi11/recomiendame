@@ -11,20 +11,20 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js('resources/assets/js/app.js', 'public/js')
     .extract(['jquery','popper.js'])
     .styles([
-        'resources/sass/demo.css',
-        'resources/sass/themify-icons.css',
-        'resources/sass/ie7.css',
-        'resources/sass/normalize.css',
-        'resources/sass/weather-icons.css',
-        'resources/sass/fullcalendar.css',
+        'resources/assets/sass/demo.css',
+        'resources/assets/sass/themify-icons.css',
+        'resources/assets/sass/ie7.css',
+        'resources/assets/sass/normalize.css',
+        'resources/assets/sass/weather-icons.css',
+        'resources/assets/sass/fullcalendar.css',
     ],'public/css/all.css')
-    .copy('resources/fonts/fonts/fonts','public/fonts')
-    .sass('resources/sass/bootstrap/bootstrap.scss', 'public/css')
-    .sass('resources/sass/style.scss', 'public/css')
-    .sass('resources/sass/socials.scss', 'public/css')
-    .sass('resources/sass/todo-list.scss', 'public/css')
-    .sass('resources/sass/variables.scss', 'public/css')
-    .sass('resources/sass/fontawesome/scss/fontawesome.scss', 'public/css');
+    .copy('resources/assets/fonts/fonts/fonts','public/fonts')
+    .sass('resources/assets/sass/bootstrap/bootstrap.scss', 'public/css')
+    // .sass('resources/assets/sass/style.scss', 'public/css')
+    .sass('resources/assets/sass/socials.scss', 'public/css')
+    // .sass('resources/assets/sass/todo-list.scss', 'public/css')
+    .sass('resources/assets/sass/variables.scss', 'public/css')
+    .sass('resources/assets/sass/fontawesome/scss/fontawesome.scss', 'public/css');
