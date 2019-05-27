@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use Illuminate\Http\Request;
+use Excel;
 
 class CustomerController extends Controller
 {
@@ -116,5 +117,40 @@ class CustomerController extends Controller
         $cliente = Customer::find($id);
         $cliente->delete();
         return redirect('clientes/lista');
+    }
+
+    public function import(Request $request)
+    {
+        return view('admin.clientes.import');
+    }
+
+    public function importCustomer (Request $request) {
+        //        dd($request);
+        $cliente = new Customer();
+
+        Excel::load($request->excel, function($reader) use ($cliente) {
+            $excel = $reader->get();
+//            dd($excel);
+            $reader->each(function($row) use ($cliente) {
+                if(!is_null($row->primernombre)){
+                    $client = new Customer();
+                    $client->nombre1 = $row->primernombre;
+                    $client->nombre2 = $row->segundonombre;
+                    $client->apPaterno = $row->apellidopaterno;
+                    $client->apMaterno = $row->apellidomaterno;
+                    $client->direccion = $row->direccion;
+                    $client->edad = $row->edad;
+                    $client->sexo = $row->sexo;
+                    $client->telefonoFijo = $row->telefonofijo;
+                    $client->telefonoMovil = $row->telefonomovil;
+                    $client->ruc = $row->ruc;
+                    $client->correo = $row->correo;
+                    $client->save();
+
+                }
+            });
+        });
+//        Notify::success('Productos importados exitosamente','Èxito');
+        return redirect('/clientes/lista');
     }
 }

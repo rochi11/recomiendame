@@ -1,8 +1,8 @@
 <header id="header" class="header">
     <div class="top-left">
         <div class="navbar-header">
-            <a class="navbar-brand" href="./userlogin"><img src="img/Rori.png" width="90" alt="Logo"></a>
-            <a class="navbar-brand hidden" href="./"><img src="img/Rori.png" alt="Logo"></a>
+            <a class="navbar-brand" href="#"><img src="img/Rori.png" width="90" alt="Logo"></a>
+            <a class="navbar-brand hidden" href="#"><img src="img/Rori.png" alt="Logo"></a>
             <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
         </div>
     </div>
@@ -19,7 +19,7 @@
 
                     <a class="nav-link" href="#"><i class="fa fa-cog"></i>Personalizar</a>
 
-                    <a class="nav-link" href="{{url('/login')}}"><i class="fa fa-power-off"></i>Salir</a>
+                    <a class="nav-link" href="{{url('userlogout')}}"><i class="fa fa-power-off"></i>Salir</a>
                 </div>
             </div>
         </div>

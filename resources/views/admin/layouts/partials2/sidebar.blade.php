@@ -15,6 +15,12 @@
                             <a href="{{url('clientes/lista')}}" class="nav-link"><i class="icon icon-graph"></i> Listar
                             </a>
                         </li>
+                        <li>
+                            <i class="fa fa-puzzle-piece">
+                            </i>
+                            <a href="{{url('cliente/importar')}}" class="nav-link"><i class="icon icon-graph"></i> Importar
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="menu-title">PRODUCTOS</li><!-- /.menu-title -->

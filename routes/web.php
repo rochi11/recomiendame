@@ -12,11 +12,11 @@
 */
 
 
-Route::get('/login', 'Auth\LoginController@showloginform')->name('login');
+Route::get('/', 'Auth\LoginController@showloginform')->name('login');
 
 Route::post('/userlogin', 'Auth\LoginController@userlogin');
 
-//Route::post('/userlogin', 'Auth\LoginController@userlogin');
+Route::get('/userlogout', 'Auth\LoginController@userlogout');
 
 Route::group(['middleware'=>['auth']], function() {
 
@@ -27,6 +27,8 @@ Route::group(['middleware'=>['auth']], function() {
     Route::get('cliente/editar/{id}', 'CustomerController@edit');
     Route::post('cliente/actualizar/{id}', 'CustomerController@update');
     Route::get('cliente/borrar/{id}', 'CustomerController@destroy');
+    Route::get('cliente/importar', 'CustomerController@import');
+    Route::post('cliente/importarCliente', 'CustomerController@importCustomer');
 // Productos
     Route::get('productos/lista', 'ProductController@index');
     Route::get('producto/nuevo', 'ProductController@create');

@@ -15,17 +15,17 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('idProduct');
-            $table->string('nombre');
-            $table->string('marca');
-            $table->string('precio');
-            $table->string('fechaVencimiento');
-            $table->string('lote');
-            $table->string('peso');
-            $table->string('cantidad');
-            $table->string('unidadMedida');
-            $table->string('descuento');
-            $table->string('fechaDescuento');
-            $table->string('nroGondola');
+            $table->string('nombre')->nullable();
+            $table->string('marca')->nullable();
+            $table->string('precio')->nullable();
+            $table->string('fechaVencimiento')->nullable();
+            $table->string('lote')->nullable();
+            $table->string('peso')->nullable();
+            $table->string('cantidad')->nullable();
+            $table->string('unidadMedida')->nullable();
+            $table->string('descuento')->nullable();
+            $table->string('fechaDescuento')->nullable();
+            $table->string('nroGondola')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

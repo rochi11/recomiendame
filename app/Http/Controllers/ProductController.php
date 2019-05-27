@@ -126,29 +126,32 @@ class ProductController extends Controller
 
     public function importProducts(Request $request)
     {
-        dd($request);
-        $category = Category::where('idAccount',Auth::user()->idAccount)->first();
+//        dd($request);
+        $producto = new Product();
 
-        Excel::load($request->excel, function($reader) use ($category) {
+        Excel::load($request->excel, function($reader) use ($producto) {
             $excel = $reader->get();
-            // iteracción
-            // dd($category);
-            $reader->each(function($row) use ($category) {
+//            dd($excel);
+            $reader->each(function($row) use ($producto) {
                 if(!is_null($row->nombre)){
-                    $product = new Product;
-                    $product->nombreProducto = $row->nombre;
-                    $product->categoriaProducto = $category->idCategoria;
-                    $product->referenciaProducto = $row->referencia;
-                    $product->codigoProducto = $row->codigo;
-                    $product->precioProducto = $row->precio;
-                    $product->medidaProducto = $row->medida;
-                    $product->favoritoProducto = 0;
-                    $product->idAccount = Auth::user()->idAccount;
+                    $product = new Product();
+                    $product->nombre = $row->nombre;
+                    $product->marca = $row->marca;
+                    $product->precio = $row->precio;
+                    $product->fechaVencimiento = $row->fvencimiento;
+                    $product->lote = $row->lote;
+                    $product->peso = $row->peso;
+                    $product->cantidad = $row->cantidad;
+                    $product->unidadMedida = $row->unidad;
+                    $product->descuento = $row->descuento;
+                    $product->fechaDescuento = $row->fdescuento;
+                    $product->nroGondola = $row->nrogondola;
                     $product->save();
+
                 }
             });
         });
-        Notify::success('Productos importados exitosamente','Èxito');
-        return redirect('/producto');
+//        Notify::success('Productos importados exitosamente','Èxito');
+        return redirect('/productos/lista');
     }
 }
