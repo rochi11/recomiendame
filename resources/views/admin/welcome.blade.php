@@ -1,89 +1,174 @@
 @extends('admin.layouts.app2')
 @section('content')
 
-    <!-- Widgets  -->
-    <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <div class="stat-widget-five">
-                        <div class="stat-icon dib flat-color-1">
-                            <i class="pe-7f-cash"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="text-left dib">
-                                <div class="stat-text">$<span class="count">23569</span></div>
-                                <div class="stat-heading">Revenue</div>
+    <div class="card">
+        <div class="card-title">
+            <h4 class="box-title">Estadistica por producto </h4>
+        </div>
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">200</span></div>
+                                    <div class="stat-heading">Cantidad de Productos</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <div class="stat-widget-five">
-                        <div class="stat-icon dib flat-color-2">
-                            <i class="pe-7f-cart"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="text-left dib">
-                                <div class="stat-text"><span class="count">3435</span></div>
-                                <div class="stat-heading">Sales</div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">3435</span></div>
+                                    <div class="stat-heading">Productos Recomendados</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <div class="stat-widget-five">
-                        <div class="stat-icon dib flat-color-3">
-                            <i class="pe-7f-browser"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="text-left dib">
-                                <div class="stat-text"><span class="count">349</span></div>
-                                <div class="stat-heading">Templates</div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-3">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">349</span></div>
+                                    <div class="stat-heading">Comprados Recomendados</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-                <div class="card-body">
-                    <div class="stat-widget-five">
-                        <div class="stat-icon dib flat-color-4">
-                            <i class="pe-7f-users"></i>
-                        </div>
-                        <div class="stat-content">
-                            <div class="text-left dib">
-                                <div class="stat-text"><span class="count">2986</span></div>
-                                <div class="stat-heading">Clients</div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">2986</span></div>
+                                    <div class="stat-heading">Tasa Producto</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Widgets End -->
     </div>
-    <!-- Widgets End -->
 
+    <div class="card">
+        <div class="card-title">
+            <h4 class="box-title">Estadistica general de productos </h4>
+        </div>
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">200</span></div>
+                                    <div class="stat-heading">Cantidad de Productos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">3435</span></div>
+                                    <div class="stat-heading">Productos Recomendados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-3">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">349</span></div>
+                                    <div class="stat-heading">Comprados Recomendados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">2986</span></div>
+                                    <div class="stat-heading">Tasa Producto</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Widgets End -->
+    </div>
 
     <!--  Traffic  -->
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="box-title">Traffic </h4>
+                    <h4 class="box-title">Estadisticas de ventas </h4>
                 </div>
                 <div class="row">
                     <div class="col-lg-8">
@@ -95,28 +180,28 @@
                     <div class="col-lg-4">
                         <div class="card-body">
                             <div class="progress-box progress-1">
-                                <h4 class="por-title">Visits</h4>
+                                <h4 class="por-title">Visitas</h4>
                                 <div class="por-txt">96,930 Users (40%)</div>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-flat-color-1" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress-box progress-2">
-                                <h4 class="por-title">Bounce Rate</h4>
+                                <h4 class="por-title">Porcentaje de usuarios</h4>
                                 <div class="por-txt">3,220 Users (24%)</div>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-flat-color-2" role="progressbar" style="width: 24%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress-box progress-2">
-                                <h4 class="por-title">Unique Visitors</h4>
+                                <h4 class="por-title">Recomendacion de productos</h4>
                                 <div class="por-txt">29,658 Users (60%)</div>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-flat-color-3" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div class="progress-box progress-2">
-                                <h4 class="por-title">Targeted  Visitors</h4>
+                                <h4 class="por-title">Recomendaciones convertidas en ventas</h4>
                                 <div class="por-txt">99,658 Users (90%)</div>
                                 <div class="progress mb-2" style="height: 5px;">
                                     <div class="progress-bar bg-flat-color-4" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
@@ -140,7 +225,7 @@
             <div class="col-xl-8">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="box-title">Orders </h4>
+                        <h4 class="box-title">Clientes </h4>
                     </div>
                     <div class="card-body--">
                         <div class="table-stats order-table ov-h">
@@ -150,10 +235,10 @@
                                     <th class="serial">#</th>
                                     <th class="avatar">Avatar</th>
                                     <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Status</th>
+                                    <th>Nombre</th>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Estado</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -161,7 +246,7 @@
                                     <td class="serial">1.</td>
                                     <td class="avatar">
                                         <div class="round-img">
-                                            <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                            <a href="#"><img class="rounded-circle" src="img/1.jpg" alt=""></a>
                                         </div>
                                     </td>
                                     <td> #5469 </td>
@@ -169,14 +254,14 @@
                                     <td> <span class="product">iMax</span> </td>
                                     <td><span class="count">231</span></td>
                                     <td>
-                                        <span class="badge badge-complete">Complete</span>
+                                        <span class="badge badge-complete">Completo</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="serial">2.</td>
                                     <td class="avatar">
                                         <div class="round-img">
-                                            <a href="#"><img class="rounded-circle" src="images/avatar/2.jpg" alt=""></a>
+                                            <a href="#"><img class="rounded-circle" src="img/2.jpg" alt=""></a>
                                         </div>
                                     </td>
                                     <td> #5468 </td>
@@ -184,14 +269,14 @@
                                     <td> <span class="product">iPad</span> </td>
                                     <td><span class="count">250</span></td>
                                     <td>
-                                        <span class="badge badge-complete">Complete</span>
+                                        <span class="badge badge-complete">Completo</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="serial">3.</td>
                                     <td class="avatar">
                                         <div class="round-img">
-                                            <a href="#"><img class="rounded-circle" src="images/avatar/3.jpg" alt=""></a>
+                                            <a href="#"><img class="rounded-circle" src="img/3.jpg" alt=""></a>
                                         </div>
                                     </td>
                                     <td> #5467 </td>
@@ -199,14 +284,14 @@
                                     <td> <span class="product">SSD</span> </td>
                                     <td><span class="count">250</span></td>
                                     <td>
-                                        <span class="badge badge-complete">Complete</span>
+                                        <span class="badge badge-complete">Completo</span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="serial">4.</td>
                                     <td class="avatar">
                                         <div class="round-img">
-                                            <a href="#"><img class="rounded-circle" src="images/avatar/4.jpg" alt=""></a>
+                                            <a href="#"><img class="rounded-circle" src="img/4.jpg" alt=""></a>
                                         </div>
                                     </td>
                                     <td> #5466 </td>
@@ -214,14 +299,14 @@
                                     <td> <span class="product">Magic Mouse</span> </td>
                                     <td><span class="count">250</span></td>
                                     <td>
-                                        <span class="badge badge-pending">Pending</span>
+                                        <span class="badge badge-pending">Pendiente</span>
                                     </td>
                                 </tr>
                                 <tr class=" pb-0">
                                     <td class="serial">5.</td>
                                     <td class="avatar pb-0">
                                         <div class="round-img">
-                                            <a href="#"><img class="rounded-circle" src="images/avatar/6.jpg" alt=""></a>
+                                            <a href="#"><img class="rounded-circle" src="img/6.jpg" alt=""></a>
                                         </div>
                                     </td>
                                     <td> #5465 </td>
@@ -229,7 +314,7 @@
                                     <td> <span class="product">Monitor</span> </td>
                                     <td><span class="count">250</span></td>
                                     <td>
-                                        <span class="badge badge-complete">Complete</span>
+                                        <span class="badge badge-complete">Completo</span>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -330,71 +415,7 @@
                 </div> <!-- /.card-body -->
             </div><!-- /.card -->
         </div>
-
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title box-title">Live Chat</h4>
-                    <div class="card-content">
-                        <div class="messenger-box">
-                            <ul>
-                                <li>
-                                    <div class="msg-received msg-container">
-                                        <div class="avatar">
-                                            <img src="images/avatar/64-1.jpg" alt="">
-                                            <div class="send-time">11.11 am</div>
-                                        </div>
-                                        <div class="msg-box">
-                                            <div class="inner-box">
-                                                <div class="name">
-                                                    John Doe
-                                                </div>
-                                                <div class="meg">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis sunt placeat velit ad reiciendis ipsam
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.msg-received -->
-                                </li>
-                                <li>
-                                    <div class="msg-sent msg-container">
-                                        <div class="avatar">
-                                            <img src="images/avatar/64-2.jpg" alt="">
-                                            <div class="send-time">11.11 am</div>
-                                        </div>
-                                        <div class="msg-box">
-                                            <div class="inner-box">
-                                                <div class="name">
-                                                    John Doe
-                                                </div>
-                                                <div class="meg">
-                                                    Hay how are you doing?
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.msg-sent -->
-                                </li>
-                            </ul>
-                            <div class="send-mgs">
-                                <div class="yourmsg">
-                                    <input class="form-control" type="text">
-                                </div>
-                                <button class="btn msg-send-btn">
-                                    <i class="pe-7f-paper-plane"></i>
-                                </button>
-                            </div>
-                        </div><!-- /.messenger-box -->
-                    </div>
-                </div> <!-- /.card-body -->
-            </div><!-- /.card -->
-        </div>
-
-    </div> <!-- /.row -->
-    <!-- To Do and Live Chat End -->
-
-
-
-
+    </div>
 
     <!-- Calender Chart Weather  -->
     <div class="row">
@@ -429,12 +450,6 @@
         </div>
     </div><!-- /.row -->
     <!-- Calender Chart Weather  End -->
-
-
-
-
-
-
 
     <div class="modal fade none-border" id="event-modal">
         <div class="modal-dialog">
