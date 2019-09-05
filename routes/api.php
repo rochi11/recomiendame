@@ -18,4 +18,4 @@ use Illuminate\Http\Request;
 //});
 
 
-Route::post('/saludo','TestController@saludo');
+Route::get('/saludo','TestController@saludo');
